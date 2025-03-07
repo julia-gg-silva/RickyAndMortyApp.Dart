@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:rm_app/models/character.dart';
 
-class DetailsScreen extends StatelessWidget {
+class DetailsScreen extends StatefulWidget {
+  
+  const DetailsScreen(this.character,{super.key});
   final Character character;
 
-  const DetailsScreen({super.key, required this.character});
+  @override
+  State<DetailsScreen> createState() => _DetailsScreenState();
+}
 
+class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
+
+    final character = widget.character;
     return Scaffold(
       appBar: AppBar(
         title: const Text("Details Character",

@@ -63,11 +63,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         title: Text(character.name),
                         subtitle: Text('Status: ${character.status}'),
-                        onTap: () {
+                        onTap: () {    
                           Navigator.push(
                             context, 
                             MaterialPageRoute(
-                              builder: (context) => DetailsScreen(character: character)
+                              builder: (context) => DetailsScreen(character)
                             ),
                           );
                         },
